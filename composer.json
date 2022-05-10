@@ -1,0 +1,45 @@
+{
+  "name": "giorgiopogliani/craftcms-starter-template",
+  "description": "Craft CMS Template",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project",
+    "template"
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "ext-json": "*",
+    "craftcms/cms": "^3.7",
+    "craftcms/redactor": "2.8.7",
+    "ether/seo": "3.7.3",
+    "nystudio107/craft-vite": "^1.0",
+    "pennebaker/craft-architect": "2.4.2",
+    "performing/twig-components": "^0.5.0",
+    "sebastianlenz/linkfield": "1.0.25",
+    "vlucas/phpdotenv": "^3.4.0"
+  },
+  "require-dev": {
+    "deployer/deployer": "^7.0",
+    "yiisoft/yii2-shell": "^2.0.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+      "@composer dump-autoload -o",
+      "@php craft setup/welcome"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

@@ -1,0 +1,19 @@
+.button {
+  @apply
+    w-full
+    inline-flex
+    items-center
+    justify-center
+    rounded
+    border
+    border-transparent
+    shadow-sm
+    px-4
+    h-9
+    font-medium
+    focus:outline-none
+    focus:ring-1
+    focus:ring-offset-2
+    sm:w-auto
+    sm:text-sm;
+}
